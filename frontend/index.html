@@ -1,26 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Keyword News Aggregator</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewsPulse | India-First Keyword News Aggregator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              bg: '#07090e',
+              surface: '#0f121a',
+              surfaceHover: '#151a26',
+              card: '#121622',
+              cardBorder: '#1c2233',
+              cardBorderHover: '#2d364f',
+              text: '#f1f5f9',
+              muted: '#7e8a9d',
+            },
+            saffron: {
+              DEFAULT: '#ff9933',
+              glow: 'rgba(255, 153, 51, 0.25)',
+            },
+            green: {
+              india: '#138808',
+            },
+            yt: '#ff0000',
+            tg: '#229ed9',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS for Shimmer & Scrollbar -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- React 18, ReactDOM 18 & Babel Standalone -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.24.4/babel.min.js"></script>
 </head>
-<body>
-  <header>
-    <h1>📰 Keyword News Aggregator</h1>
-    <p>Search a topic across YouTube &amp; Telegram — India results first.</p>
-  </header>
+<body class="bg-brand-bg text-brand-text min-h-screen antialiased selection:bg-saffron/30 selection:text-white">
+  <div id="root"></div>
 
-  <form id="search-form">
-    <input type="text" id="keyword-input" placeholder="e.g. cricket, elections, AI..." required>
-    <button type="submit">Search</button>
-  </form>
-
-  <div id="status"></div>
-
-  <main id="results" class="columns"></main>
-
-  <script src="app.js"></script>
+  <!-- React Application -->
+  <script type="text/babel" src="app.js"></script>
 </body>
 </html>
