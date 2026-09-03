@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyword News Aggregator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📰 Keyword News Aggregator</h1>
+    <p>Search a topic across YouTube &amp; Telegram — India results first.</p>
+  </header>
+
+  <form id="search-form">
+    <input type="text" id="keyword-input" placeholder="e.g. cricket, elections, AI..." required>
+    <button type="submit">Search</button>
+  </form>
+
+  <div id="status"></div>
+
+  <main id="results" class="columns"></main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+# Virtual environment
+venv/
+.venv/
+backend/venv/
+
+# Environment secrets (API keys)
+.env
+*.env
+backend/.env
+
+# Telegram session files (CRITICAL: contains login credentials)
+*.session
+*.session-journal
+backend/*.session
+backend/*.session-journal
+
+# SQLite database files
+*.db
+*.sqlite3
+backend/*.db
+backend/*.sqlite3
+
+# Python bytecode & cache
+__pycache__/
+backend/**/__pycache__/
+*.py[cod]
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
